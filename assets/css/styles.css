@@ -124,11 +124,13 @@ img {
   color: var(--title-color);
   font-family: var(--second-font);
   font-weight: var(--font-semi-bold);
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: color .4s;
 }
 .nav__logo:hover {
   color: var(--first-color);
+  transform: scale(1.2);
+  filter: drop-shadow(2px 5px 14px hsla(25, 88%, 43%, 0.5));
 
 }
 .nav__toggle,
@@ -227,6 +229,7 @@ img {
 }
 .home__img-1,.home__img-2{
   width: 300px;
+  filter: drop-shadow(4px 4px 18px hsla(25, 90%, 40%, .5));
 }
 .home__img-1{
   filter: drop-shadow(0 16px 48px hsla(25, 90%, 40%, .5));
