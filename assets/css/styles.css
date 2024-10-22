@@ -54,9 +54,6 @@ html {
   border-radius: 2.5px;
   background:#faf8f8d1;
 }
-::-webkit-scrollbar-thumb{
-  background: var(--first-color);
-}
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
