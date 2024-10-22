@@ -45,22 +45,29 @@
   margin: 0;
 
 }
-
+/* ============costom scroll bar================= */
 
 ::-webkit-scrollbar{
-  width: 10px;
+  width: 12px;
   border-radius: 2.5px;
-  background:#faf8f8d1;
+}
+::-webkit-scrollbar-track{
+  background: #fff;
 }
 ::-webkit-scrollbar-thumb{
-  background: var(--first-color);
   border-radius: 2.5px;
+  background: var(--first-color);
 }
+::-webkit-scrollbar-thumb:hover{
+  background: var(--first-color-alt);
+}
+
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  scroll-behavior: smooth;
   
 }
 
@@ -91,7 +98,7 @@ img {
 }
 
 .main {
-  overflow-x: hidden;
+  overflow-x:hidden ;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -115,6 +122,7 @@ img {
 
 .nav__logo{
   color: var(--title-color);
+  font-family: var(--second-font);
   font-weight: var(--font-semi-bold);
   font-size: 1.5rem;
   transition: color .4s;
@@ -319,7 +327,34 @@ img {
     opacity: 0;
   }
 }
+/*============= Events=============== */
 
+.events{
+  margin-top: 4rem;
+  height: 100vh;
+}
+
+.section__title{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.visit{
+  height: 100vh;
+}
+.contact{
+  height: 100vh;
+}
+.footer{
+color: #f8f8f8; 
+ height: 5rem;
+  background-color: #0e0e20bc;
+}
+.footer p{
+padding-top:25px;
+font-size: 1rem;
+  text-align: center;
+}
 
 /* Atropos class */
 
