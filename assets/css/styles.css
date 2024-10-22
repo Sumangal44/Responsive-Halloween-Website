@@ -55,7 +55,6 @@ html {
   background:#faf8f8d1;
 }
 ::-webkit-scrollbar-thumb{
-  border-radius: 2.5;
   background: var(--first-color);
 }
 body {
