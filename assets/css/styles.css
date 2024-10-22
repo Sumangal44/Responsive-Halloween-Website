@@ -46,6 +46,18 @@
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  width: 10px;
+  border-radius: 2.5px;
+  background:#faf8f8d1;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 2.5;
+  background: var(--first-color);
+}
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -81,7 +93,7 @@ img {
 }
 
 .main {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -158,27 +170,180 @@ img {
 /* Show menu */
 .show-menu {
   top: 0;
-  
+
 }
 
 
 
 /* Add shadow header */
+.shadow-header{
+  background-color: var(--body-color);
+  box-shadow: 0 2px 16px hsla(25, 48%, 12%, .2);
+}
 
 
 /*=============== HOME ===============*/
+.home__container{
+  height: 100vh;
+  padding-top: 7rem;
+  row-gap: 2rem;
+}
+.home__data{
+  text-align: center;
+}
+.home__title{
+  font: var(--font-regular) var(--biggest-font-size) var(--second-font);
+  line-height: 100%;
+  color: var(--title-color);
+  margin-bottom: .5rem;
+}
+.home__description{
+  font-size: var(--normal-font-size);
+  margin-bottom: 1.5rem;
+}
+.home__button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  box-shadow: 0 16px 32px hsla(25, 90%, 40%, .3);
+  transition: background-color .4s;
 
-
+}
+.home__button:hover{
+  background-color: var(--first-color-alt);
+}
+.home__images{
+  position: relative;
+  justify-content: center;
+}
+.home__img-1,.home__img-2{
+  width: 300px;
+}
+.home__img-1{
+  filter: drop-shadow(0 16px 48px hsla(25, 90%, 40%, .5));
+}
+.home__img-2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: flicker 8s linear infinite;
+}
 /* Animated images */
+@keyframes flicker {
+  0%{
+    opacity: 0;
+  }
+  31.98%{
+    opacity: 0;
+  }
+  32%{
+    opacity: 1;
+  }
+  32.8%{
+    opacity: 1;
+  }
+  32.88%{
+    opacity: 0;
+  }
+  34%{
+    opacity: 1;
+  }
+  35%{
+        opacity: 1;
+  }
+  35.7%{
+    opacity: 1;
+  }
+  35.78%{
+    opacity: 0;
+  }
+  36.98%{
+    opacity: 0;
+  }
+
+  37%{
+    opacity: 1;
+  }
+
+  37.6%{
+    opacity: 1;
+  }
+
+  37.89%{
+    opacity: 1;
+  }
+67.98%{
+  opacity: 1;
+}
+
+  68%{
+    opacity: 1;
+  }
+
+  68.5%{
+    opacity: 1;
+  }
+
+  68.45%{
+    opacity:0;
+  }
+
+  95.98%{
+    opacity: 0;
+  }
+
+  96%{
+    opacity:1;
+  }
+
+  96.8%{
+    opacity: 1;
+  }
+
+  96.78%{
+    opacity: 0;
+  }
+  
+  98.98%{
+    opacity: 0;
+  }
+  99%{
+    opacity: 1;
+  }
+
+  99.7%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 
 
 /* Atropos class */
 
+.atropos-inner {
+  overflow: initial
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media  screen and (max-width:320px) {
+  .container{
+    margin-inline: 1rem;
+  }
+  
+}
 
-
+@media screen and (min-width:350px) and (max-width:680px) {
+  .home__container{
+    height: 780px;
+  }
+  
+}
 /* For medium devices */
 
 
